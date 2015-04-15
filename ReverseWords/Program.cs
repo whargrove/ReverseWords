@@ -32,8 +32,9 @@ namespace ReverseWords
 			var split = s.Split(' ').ToList();
 			for (var i = split.Count - 1; i >= 0; i--)
 			{
-				reversed.Append(string.Format("{0}{1}", split[i], i == 0 ? string.Empty : " "));
+				reversed.Append(string.Format("{0} ", split[i]));
 			}
+			reversed.Remove(s.Length, 1); // Remove the last character
 			return reversed.ToString();
 		}
 
