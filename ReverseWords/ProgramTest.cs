@@ -27,13 +27,13 @@ namespace ReverseWords
 			Assert.AreEqual(expected, actual);
 		}
 
-		[TestCase("A long time ago in a galaxy far far away")]
-		public void ReverseWords_ShouldReturnAStringWithWordsReversed(string s)
+		[TestCase("A long time ago in a galaxy far far away", "away far far galaxy a in ago time long A")]
+		[TestCase("Hello, my name is George!", "!George is name my, Hello")]
+		public void ReverseWords_ShouldReturnAStringWithWordsReversed(string s, string expected)
 		{
 			// Given a string (see test cases)
 			// When ReverseWords() is invoked
 			var actual = Program.ReverseWords(s);
-			var expected = "away far far galaxy a in ago time long A";
 			// Then the output is the string reversed by word
 			Assert.AreEqual(expected, actual);
 		}
